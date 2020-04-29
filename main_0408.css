@@ -1,0 +1,483 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face {
+    font-family: 'sunflower';
+    src: url("../fonts/webfontkit-20200330-140113/madesunflower-webfont.woff2") format('woff2'),
+         url("../fonts/webfontkit-20200330-140113/madesunflower-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'source code pro';
+    src: url("../fonts/sourcecodePro/sourcecodepro-regular-webfont.woff2") format('woff2'),
+        url("../fonts/sourcecodePro/sourcecodepro-regular-webfont.woff") format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 40px;
+	width: 100vw;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    height: 100%;
+}
+body {
+    overflow-y: hidden;
+    height: 100%;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* typical classes */
+.centerSmall{
+	position: absolute;
+	width: 60vw;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+.centerMedium {
+	position: absolute;
+	width: 80vw;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+.centerLarge {
+	position: absolute;
+	width: 90vw;
+	height: auto;
+    top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+.splitTextTop {
+	position: absolute;
+	top: 2%;
+	font-size: 3rem;
+	left: 50%;
+	-ms-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%);
+	z-index: 1;
+}
+.splitTextBottom {
+	position: absolute;
+	bottom: 2%;
+	font-size: 3rem;
+	left: 50%;
+	-ms-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%);
+	z-index: 1;
+}
+.textTopLeft {
+	position: absolute;
+	font-size: 1.2rem;
+	top: 2%;
+	left: 2vw;
+	text-align: left;
+}
+.textBottomLeft {
+	position: absolute;
+	font-size: 1rem;
+	bottom: 1.5%;
+	left: 5vw;
+}
+.textBottomRight {
+	position: absolute;
+	font-size: 1.4rem;
+	bottom: 3vw;
+	right: 5vw;
+	text-align: right;
+}
+.textCenterLarge {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 5em;
+}
+.textCenterMedium {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 3em;
+}
+.twoImageStack {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	width: 85vw;
+	height: auto;
+	flex-direction: column;
+}
+.twoImageTop {
+	position: relative;
+	width: 100%;
+	height: auto;
+	top: 0;
+	left: 0;
+}
+.twoImageBottom {
+	position: relative;
+	width: 100%;
+	height: auto;
+	top: 10px;
+	left: 0;
+}
+.whiteBox{
+	position: absolute;
+	background-color: white;
+	width: 95vw;
+	height: 95%;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.blackBack{
+	background-color: black;
+}
+.bigDot {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 40vh;
+	height: 40vh;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
+}
+.smaller {
+	font-size: 0.7em;
+}
+.bigger {
+	font-size: 1.6em;
+}
+.evenBigger {
+	font-size: 4em;
+}
+/* typical classes end */
+/* snap-scrolling set-up */
+.slider {
+    font-family: sunflower;
+    scroll-snap-type: x mandatory;  
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100%;
+}
+section {
+    min-width: 100vw;
+    height: 100%;;
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
+}
+/* snap-scroll set up end */
+#cover {
+	background-image: url("../Pictures/cover.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+#title {
+	font-size: 7rem;
+	top: 30px;
+	position: absolute;
+    text-align: center;
+    color: white;
+    width: 100%;
+    left: 50%;
+	transform: translate(-50%, 0%);
+}
+#coverText {
+	display: flex;
+	padding: 40vh 0 0 0;
+	justify-content: center;
+	color: white;
+}
+#jan {
+	position: absolute;
+	left: 15px;
+	font-size: 2rem;
+	top: 30vh;
+}
+#thruogh {
+	font-size: 1rem;
+}
+#mar {
+	position: absolute;
+	right: 15px;
+	font-size: 2rem;
+	bottom: 40vh;
+}
+.laniaLogo {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	width: 75vw;
+	height: auto;
+	bottom: 10vh;
+}
+#nameTitle {
+	position: absolute;
+	right: -65px;
+	bottom: 15vh;
+	transform: rotate(-90deg);
+	color: white;
+	font-size: 1em
+}
+#swipe {
+	position: absolute;
+	right: 5px;
+	bottom: 2vh;
+	color: white;
+	font-size: 1em
+}
+#two {
+	background-color: rgba(180, 221, 191);
+	text-align: cetner;
+}
+#intro {
+	position: absolute;
+	width: 90vw;
+	height: auto;
+	text-align: center;
+	color: white;
+	font-size: 1.8em;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+#description { 
+	position: relative;
+	height: 100%;
+}
+#description p {
+	margin: 0;
+	position: absolute;
+	width: 100vw;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-size: 1.3em;
+}
+#three {
+	background-color: white;
+}
+#frontCamera {
+	position: absolute;
+	top: 30px;
+	left: 33%;
+	-ms-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%);
+	width: 25px;
+	height: 25px;
+	background-color: rgba(115,115,115,1.00);
+	border-radius: 50%;
+	display: inline-block;
+}
+#speaker {
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	width: 100px;
+	height: 20px;;
+	background-color: rgba(115,115,115,1.00);
+	border-radius: 10px;
+	z-index: 3;
+}
+#screen {
+	position: absolute;
+	background-color: white;
+	width: 90vw;
+	height: 90%;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	border-radius: 20px;
+}
+#bigStar { 
+	position: absolute;
+	top: 10vh;
+	left: 30px;
+	font-size: 18em;
+}
+#designedFor {
+	position: absolute;
+	width: 60vw;
+	top: 35vh;
+	right: 15px;
+	font-size: 1.8em;
+	text-align: left;
+}
+#five {
+	background: linear-gradient(180deg, white 50%, black 50%);
+}
+#five h1 {
+	position: absolute;
+	color: white;
+	bottom: 240px;
+	right: -200px;
+	transform: rotate(-90deg);
+	font-size: 4em;
+}
+#madridStart {
+	position: absolute;
+	left: 30px;
+	top: 60px;
+	width: 60vw;
+	height: auto;
+}
+#seven {
+	background-color: rgb(248, 242, 154);
+}
+#eight {
+	background-color: rgb(189, 230, 241);
+}
+#nine {
+	background-image: url("../Pictures/MADRID/DSC08703.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.nextCoverUp {
+	position: absolute
+}
+#eleven {
+	background-image: url("../Pictures/NEXTTEXT.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#sixteen {
+	background-color: rgb(251, 201, 199);
+}
+#eighteen {
+	background-color: rgb(185, 223, 196);
+}
+#twenty { 
+	background-image: url("../Pictures/PR/treess-01.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#twentyThree {
+	background-color: rgb(120, 195, 106);
+}
+#twentyFour {
+	background-color: rgb(227, 149, 186);
+}
+#homeVertical {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	font-size: 2em;
+}
+#nyExtraOne {
+	background-image: url("../Pictures/NY/DSC08907.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#nyExtraTwo {
+	background-image: url("../Pictures/NY/DSC08911.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#laniaMagDescription {
+	position: absolute;
+	width: 100vw;
+	height: auto;
+	top: 30%;
+	left: 50%;
+	-ms-transform: translate(-50%, 00%);
+	transform: translate(-50%, 00%);
+}
+#laniaEmail {
+	position: absolute;
+	width: 80vw;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-size: 1.7em;
+	color: black;
+}
+#lookingFor {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	-ms-transform: translate(-50%, 00%);
+	transform: translate(-50%, 00%);
+}#ART {
+  text-align: center;
+  animation-name: spin, depth;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(720deg); }
+}
+@keyframes depth {
+  0% { text-shadow: 0 0 black; }
+  25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black; }
+  50% { text-shadow: 0 0 black; }
+  75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
+  100% { text-shadow: 0 0 black; }
+}
+#laniaWavy {
+	position: absolute;
+	width: 75vw;
+	bottom: 35%;
+	left: 50%;
+	-ms-transform: translate(-50%, 00%);
+	transform: translate(-50%, 00%);
+}
+#ps {
+	position: absolute;
+	width: 90vw;
+	height: auto;
+	bottom: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-size: 1.8em;
+}
